@@ -1,0 +1,48 @@
+{%extends 'header.html' %}
+
+{%block body_block%}
+<div class="container mt-4">
+    <div class="p-4 m-4">
+        <div class="col-lg-5 rounded mx-auto border pt-4">
+            <div class="text-center col">
+            
+            <!-- <hr> -->
+            <div class="display-5 m-4">Login Here</div>
+            
+            </div>
+            <h3 hidden class="alert alert-light border rounded">Create An Account</h3>
+            <form action="" method="POST">
+                
+                {% csrf_token %}
+
+                {% if error%}
+                <div class="alert alert-danger" role="alert">
+                    {{error}}
+                </div>
+                {% endif %}
+                <!-- email -->
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input required type="email" name="email" id=""
+                    value="{{values.email}}" 
+                    class=" form-control-sm form-control" placeholder="example@gmail.com">
+                </div>
+
+
+                <!-- password -->
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" 
+                    name="password" 
+                    id=""
+                     class="form-control form-control-sm" placeholder="********">
+                </div>
+                <div class="form-group  mt-2">
+                    <input class="btn btn-sm btn-info mx-2" type="submit" value="Login ">
+                   <span style="font-size: 12px;">Don't Have An Account ? </span><a href="{% url 'signup' %}" class="link-primary"> Signup</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{%endblock%}
