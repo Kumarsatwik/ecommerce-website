@@ -27,7 +27,7 @@ Backend : Django , Sqlite
 ![Logo](https://ik.imagekit.io/3wzfnznig/signup.png?updatedAt=1687459528793)
 
 
-#Cart Page
+# Cart Page
 
 ![Logo](https://ik.imagekit.io/3wzfnznig/cart.png?updatedAt=1687459528387)
 
